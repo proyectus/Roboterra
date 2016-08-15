@@ -1,0 +1,91 @@
+﻿@model Invoicing.Models.Order
+
+<div class="container-fluid">
+
+    <div class="row" style="margin-top:25px;margin-bottom:10px">
+        <div class="col-xs-12">
+            <span style="color:blue;font-weight:bold;">FINANCIAL DEPARTMENT</span>
+        </div>
+    </div>
+    <div class="row" style="margin-top:15px;margin-bottom:15px">
+        <div class="col-xs-12">            
+            <input type="checkbox" ng-change="copyFromTeacher()" ng-model="ind_FD" /> Copy from teacher info
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-xs-6 form-group">
+            @Html.LabelFor(model => model.FD_FirstName, "First Name", htmlAttributes: new { @class = "control-label" })
+            @Html.EditorFor(model => model.FD_FirstName, new { htmlAttributes = new { @class = "form-control", ng_model = "Order.FD_FirstName" } })
+            @Html.ValidationMessageFor(model => model.FD_FirstName, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="col-xs-6 form-group">
+            @Html.LabelFor(model => model.FD_LastName, "Last Name", htmlAttributes: new { @class = "control-label" })
+            @Html.EditorFor(model => model.FD_LastName, new { htmlAttributes = new { @class = "form-control", ng_model = "Order.FD_LastName" } })
+            @Html.ValidationMessageFor(model => model.FD_LastName, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6 form-group">
+            @Html.LabelFor(model => model.FD_Email, "Email", htmlAttributes: new { @class = "control-label" })
+            @Html.EditorFor(model => model.FD_Email, new { htmlAttributes = new { @class = "form-control", ng_model = "Order.FD_Email" } })
+            @Html.ValidationMessageFor(model => model.FD_Email, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="col-xs-6 form-group">
+            @Html.LabelFor(model => model.FD_Phone, "Phone", htmlAttributes: new { @class = "control-label" })
+            @Html.EditorFor(model => model.FD_Phone, new { htmlAttributes = new { @class = "form-control", ng_model = "Order.FD_Phone" } })
+            @Html.ValidationMessageFor(model => model.FD_Phone, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6 form-group">
+            @Html.LabelFor(model => model.FD_Mobile, "Mobile", htmlAttributes: new { @class = "control-label" })
+            @Html.EditorFor(model => model.FD_Mobile, new { htmlAttributes = new { @class = "form-control", ng_model = "Order.FD_Mobile" } })
+            @Html.ValidationMessageFor(model => model.FD_Mobile, "", new { @class = "text-danger" })
+        </div>
+
+    </div>
+
+    <div class="row" style="margin-top:25px;margin-bottom:10px">
+        <div class="col-xs-12">
+            <span style="color:blue;font-weight:bold;">SHIPPING ADDRESS</span>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-xs-6 form-group">
+            @Html.LabelFor(model => model.FD_ShippingAddress, "Address", htmlAttributes: new { @class = "control-label" })
+            @Html.EditorFor(model => model.FD_ShippingAddress, new { htmlAttributes = new { @class = "form-control", ng_model = "Order.FD_ShippingAddress" } })
+            @Html.ValidationMessageFor(model => model.FD_ShippingAddress, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="col-xs-6 form-group">
+            @Html.LabelFor(model => model.FD_ShippingCountry, "Country", htmlAttributes: new { @class = "control-label" })
+            @Html.EditorFor(model => model.FD_ShippingCountry, new { htmlAttributes = new { @class = "form-control", ng_model = "Order.FD_ShippingCountry" } })
+            @Html.ValidationMessageFor(model => model.FD_ShippingCountry, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6 form-group">
+            @Html.LabelFor(model => model.FD_ShippingCity, "City", htmlAttributes: new { @class = "control-label" })
+            @Html.EditorFor(model => model.FD_ShippingCity, new { htmlAttributes = new { @class = "form-control", ng_model = "Order.FD_ShippingCity" } })
+            @Html.ValidationMessageFor(model => model.FD_ShippingCity, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="col-xs-6 form-group">
+            @Html.LabelFor(model => model.FD_ShippingState, "State", htmlAttributes: new { @class = "control-label" })
+            @Html.EditorFor(model => model.FD_ShippingState, new { htmlAttributes = new { @class = "form-control", ng_model = "Order.FD_ShippingState" } })
+            @Html.ValidationMessageFor(model => model.FD_ShippingState, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="col-xs-6 form-group">
+            @Html.LabelFor(model => model.FD_ShippingZip, "Zip", htmlAttributes: new { @class = "control-label" })
+            @Html.EditorFor(model => model.FD_ShippingZip, new { htmlAttributes = new { @class = "form-control", ng_model = "Order.FD_ShippingZip" } })
+            @Html.ValidationMessageFor(model => model.FD_ShippingZip, "", new { @class = "text-danger" })
+        </div>
+    </div>
+</div>

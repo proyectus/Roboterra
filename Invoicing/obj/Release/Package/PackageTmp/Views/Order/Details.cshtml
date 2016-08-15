@@ -1,0 +1,179 @@
+﻿@model Invoicing.Models.Order
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Invoice</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mobile)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mobile)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShippingAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShippingAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShippingCountry)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShippingCountry)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShippingCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShippingCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShippingState)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShippingState)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShippingZip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShippingZip)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FD_FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FD_FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FD_LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FD_LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FD_Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FD_Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FD_Phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FD_Phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FD_Mobile)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FD_Mobile)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FD_ShippingAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FD_ShippingAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FD_ShippingCountry)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FD_ShippingCountry)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FD_ShippingCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FD_ShippingCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FD_ShippingState)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FD_ShippingState)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FD_ShippingZip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FD_ShippingZip)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,152 @@
+﻿@model IEnumerable<Invoicing.Models.Order>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>List of Orders</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mobile)
+        </th>
+        <!--
+        <th>
+            Html.DisplayNameFor(model => model.ShippingAddress)
+        </th>
+            
+        <th>
+            Html.DisplayNameFor(model => model.ShippingCountry)
+        </th>
+        <th>
+            Html.DisplayNameFor(model => model.ShippingCity)
+        </th>
+        <th>
+            Html.DisplayNameFor(model => model.ShippingState)
+        </th>
+        <th>
+            Html.DisplayNameFor(model => model.ShippingZip)
+        </th>
+        <th>
+            Html.DisplayNameFor(model => model.FD_FirstName)
+        </th>
+        <th>
+            Html.DisplayNameFor(model => model.FD_LastName)
+        </th>
+        <th>
+            Html.DisplayNameFor(model => model.FD_Email)
+        </th>
+        <th>
+            Html.DisplayNameFor(model => model.FD_Phone)
+        </th>
+        <th>
+            Html.DisplayNameFor(model => model.FD_Mobile)
+        </th>
+        <th>
+            Html.DisplayNameFor(model => model.FD_ShippingAddress)
+        </th>
+        <th>
+            Html.DisplayNameFor(model => model.FD_ShippingCountry)
+        </th>
+        <th>
+            Html.DisplayNameFor(model => model.FD_ShippingCity)
+        </th>
+        <th>
+            Html.DisplayNameFor(model => model.FD_ShippingState)
+        </th>
+        <th>
+            Html.DisplayNameFor(model => model.FD_ShippingZip)
+        </th>
+            -->
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mobile)
+        </td>
+        <!--
+        <td>
+            Html.DisplayFor(modelItem => item.ShippingAddress)
+        </td>
+        <td>
+            Html.DisplayFor(modelItem => item.ShippingCountry)
+        </td>
+        <td>
+            Html.DisplayFor(modelItem => item.ShippingCity)
+        </td>
+        <td>
+            Html.DisplayFor(modelItem => item.ShippingState)
+        </td>
+        <td>
+            Html.DisplayFor(modelItem => item.ShippingZip)
+        </td>
+        <td>
+            Html.DisplayFor(modelItem => item.FD_FirstName)
+        </td>
+        <td>
+            Html.DisplayFor(modelItem => item.FD_LastName)
+        </td>
+        <td>
+            Html.DisplayFor(modelItem => item.FD_Email)
+        </td>
+        <td>
+            Html.DisplayFor(modelItem => item.FD_Phone)
+        </td>
+        <td>
+            Html.DisplayFor(modelItem => item.FD_Mobile)
+        </td>
+        <td>
+            Html.DisplayFor(modelItem => item.FD_ShippingAddress)
+        </td>
+        <td>
+            Html.DisplayFor(modelItem => item.FD_ShippingCountry)
+        </td>
+        <td>
+            Html.DisplayFor(modelItem => item.FD_ShippingCity)
+        </td>
+        <td>
+            Html.DisplayFor(modelItem => item.FD_ShippingState)
+        </td>
+        <td>
+            Html.DisplayFor(modelItem => item.FD_ShippingZip)
+        </td>-->
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,129 @@
+﻿@model Invoicing.Models.Order
+
+<div class="container-fluid">
+
+    <div class="row" style="margin-top:25px;margin-bottom:10px">
+        <div class="col-xs-12">
+            <span style="color:blue;font-weight:bold;">TEACHER INFO</span>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-6 form-group">
+            @Html.LabelFor(model => model.FirstName, "First Name", htmlAttributes: new { @class = "control-label" })
+            @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control", ng_model = "Order.FirstName" } })
+            @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger", @style = "display:block;" })
+        </div>
+        <div class="col-xs-6 form-group">
+            @Html.LabelFor(model => model.LastName, "Last Name", htmlAttributes: new { @class = "control-label" })
+            @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control", ng_model = "Order.LastName" } })
+            @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-6 form-group">
+            @Html.LabelFor(model => model.Email, "Email", htmlAttributes: new { @class = "control-label" })
+            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", ng_model = "Order.Email" } })
+            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+        </div>
+        <div class="col-xs-6 form-group">
+            @Html.LabelFor(model => model.Phone, "Phone", htmlAttributes: new { @class = "control-label" })
+            @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control", ng_model = "Order.Phone" } })
+            @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-6 form-group">
+            @Html.LabelFor(model => model.Mobile, "Mobile", htmlAttributes: new { @class = "control-label" })
+            @Html.EditorFor(model => model.Mobile, new { htmlAttributes = new { @class = "form-control", ng_model = "Order.Mobile" } })
+            @Html.ValidationMessageFor(model => model.Mobile, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="row" style="margin-top:25px;margin-bottom:10px">
+        <div class="col-xs-12">
+            <span style="color:blue;font-weight:bold;">SHIPPING ADDRESS</span>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-6 form-group">
+            @Html.LabelFor(model => model.ShippingAddress, "Address", htmlAttributes: new { @class = "control-label" })
+            @Html.EditorFor(model => model.ShippingAddress, new { htmlAttributes = new { @class = "form-control", ng_model = "Order.ShippingAddress" } })
+            @Html.ValidationMessageFor(model => model.ShippingAddress, "", new { @class = "text-danger" })
+        </div>
+        <div class="col-xs-6 form-group">
+            @Html.LabelFor(model => model.ShippingCountry, "Country", htmlAttributes: new { @class = "control-label" })
+            @Html.EditorFor(model => model.ShippingCountry, new { htmlAttributes = new { @class = "form-control", ng_model = "Order.ShippingCountry" } })
+            @Html.ValidationMessageFor(model => model.ShippingCountry, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6 form-group">
+            @Html.LabelFor(model => model.ShippingCity, "City", htmlAttributes: new { @class = "control-label" })
+            @Html.EditorFor(model => model.ShippingCity, new { htmlAttributes = new { @class = "form-control", ng_model = "Order.ShippingCity" } })
+            @Html.ValidationMessageFor(model => model.ShippingCity, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="col-xs-6 form-group">
+            @Html.LabelFor(model => model.ShippingState, "State", htmlAttributes: new { @class = "control-label" })
+            @Html.EditorFor(model => model.ShippingState, new { htmlAttributes = new { @class = "form-control", ng_model = "Order.ShippingState" } })
+            @Html.ValidationMessageFor(model => model.ShippingState, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6 form-group">
+            @Html.LabelFor(model => model.ShippingZip, "Zip", htmlAttributes: new { @class = "control-label" })
+            @Html.EditorFor(model => model.ShippingZip, new { htmlAttributes = new { @class = "form-control", ng_model = "Order.ShippingZip" } })
+            @Html.ValidationMessageFor(model => model.ShippingZip, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="row" style="margin-top:25px;margin-bottom:10px">
+        <div class="col-xs-12">
+            <span style="color:blue;font-weight:bold;">PRODUCT DETAILS</span>            
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <!--<p> {{ Order.OrderDetails | json }}</p>-->
+            <table class="table table-condensed table-bordered">
+                <thead>
+                <th style="width:40%">Description</th>
+                <th style="width:20%">Quantity</th>
+                <th style="width:20%">Unit Price</th>
+                <th style="width:20%">Total</th>
+                </thead>
+                <tbody>
+                        <tr ng-repeat="detail in Order.OrderDetails">
+                            <td>
+                                {{ detail.Description }}
+                                @Html.HiddenFor(model => model.OrderDetails.ToList()[0].ZohoIdProduct, new { ng_model = "detail.ZohoIdProduct", @Name = "OrderDetails[0].ZohoIdProduct" } )
+                                @Html.HiddenFor(model => model.OrderDetails.ToList()[0].Item, new { ng_model = "detail.Item", @Name = "OrderDetails[0].Item" } )
+                                @Html.HiddenFor(model => model.OrderDetails.ToList()[0].Description, new { ng_model = "detail.Description", @Name = "OrderDetails[0].Description" })
+                            </td>
+                            <td>
+                                @Html.EditorFor(model => model.OrderDetails.ToList()[0].Qty, new { htmlAttributes = new { @class = "form-control", ng_change = "calcLine(detail)", ng_model="detail.Qty", @Name="OrderDetails[0].Qty" } })
+                                @Html.ValidationMessageFor(model => model.OrderDetails.ToList()[0].Qty, "", new { @class = "text-danger" })
+                            </td>
+                            <td>
+                                {{ detail.Price | currency: "$ " : 2 }}
+                                @Html.HiddenFor(model => model.OrderDetails.ToList()[0].Price, new { ng_model = "detail.Price", @Name = "OrderDetails[0].Price"})
+                            </td>
+                            <td>
+                                {{ detail.Total | currency: "$ " : 2 }}                               
+                            </td>
+
+                        </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+</div>
+
