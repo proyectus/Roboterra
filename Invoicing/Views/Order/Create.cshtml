@@ -5,10 +5,10 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <script>
-    var getEmailsUrl = "@Url.Action("CreateVM", "Order")";
+    //var getEmailsUrl = "@Url.Action("CreateVM", "Order")";
 </script>
 
-<h2>New Order</h2>
+<h2>Create Invoice</h2>
 <br />
 @using (Html.BeginForm()) 
 {
@@ -29,296 +29,528 @@
         <div id='TabFinancial' class='tab-pane'>Html.Partial("_TabFinancial", Model)</div>
     </div>
         -->
-<div class="container-fluid" ng-app="md" ng-controller="ctrl">
+    <div class="container-fluid">
 
-            <div class="row" style="margin-top:0px;margin-bottom:10px">
-                <div class="col-xs-12">
-                    <span style="color:blue;font-weight:bold;">TEACHER INFO</span>
-                </div>
+        <div class="row" style="margin-top:0px;margin-bottom:10px">
+            <div class="col-xs-12">
+                <span style="color:blue;font-weight:bold;">TEACHER INFO</span>
             </div>
-
-            <div class="row">
-                <div class="col-xs-6 form-group">
-                    @Html.LabelFor(model => model.FirstName, "First Name", htmlAttributes: new { @class = "control-label" })
-                    @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control", ng_model = "Order.FirstName" } })
-                    @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger", @style = "display:block;" })
-                </div>
-                <div class="col-xs-6 form-group">
-                    @Html.LabelFor(model => model.LastName, "Last Name", htmlAttributes: new { @class = "control-label" })
-                    @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control", ng_model = "Order.LastName" } })
-                    @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-xs-6 form-group">
-                    @Html.LabelFor(model => model.Email, "Email", htmlAttributes: new { @class = "control-label" })
-                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", ng_model = "Order.Email" } })
-                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
-                </div>
-                <div class="col-xs-6 form-group">
-                    @Html.LabelFor(model => model.Phone, "Phone", htmlAttributes: new { @class = "control-label" })
-                    @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control", ng_model = "Order.Phone" } })
-                    @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-xs-6 form-group">
-                    @Html.LabelFor(model => model.Mobile, "Mobile", htmlAttributes: new { @class = "control-label" })
-                    @Html.EditorFor(model => model.Mobile, new { htmlAttributes = new { @class = "form-control", ng_model = "Order.Mobile" } })
-                    @Html.ValidationMessageFor(model => model.Mobile, "", new { @class = "text-danger" })
-                </div>
-                <div class="col-xs-6 form-group">
-                    @Html.LabelFor(model => model.SchoolName, "School Name", htmlAttributes: new { @class = "control-label" })
-                    @Html.EditorFor(model => model.SchoolName, new { htmlAttributes = new { @class = "form-control", ng_model = "Order.SchoolName" } })
-                    @Html.ValidationMessageFor(model => model.SchoolName, "", new { @class = "text-danger" })
-                </div>
-            </div>
-
-            <div class="row" style="margin-top:25px;margin-bottom:10px">
-                <div class="col-xs-12">
-                    <span style="color:blue;font-weight:bold;">SHIPPING ADDRESS</span>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-xs-6 form-group">
-                    @Html.LabelFor(model => model.ShippingAddress, "Address", htmlAttributes: new { @class = "control-label" })
-                    @Html.EditorFor(model => model.ShippingAddress, new { htmlAttributes = new { @class = "form-control", ng_model = "Order.ShippingAddress" } })
-                    @Html.ValidationMessageFor(model => model.ShippingAddress, "", new { @class = "text-danger" })
-                </div>
-                <div class="col-xs-6 form-group">
-                    @Html.LabelFor(model => model.ShippingCountry, "Country", htmlAttributes: new { @class = "control-label" })
-                    @Html.EditorFor(model => model.ShippingCountry, new { htmlAttributes = new { @class = "form-control", ng_model = "Order.ShippingCountry" } })
-                    @Html.ValidationMessageFor(model => model.ShippingCountry, "", new { @class = "text-danger" })
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-6 form-group">
-                    @Html.LabelFor(model => model.ShippingCity, "City", htmlAttributes: new { @class = "control-label" })
-                    @Html.EditorFor(model => model.ShippingCity, new { htmlAttributes = new { @class = "form-control", ng_model = "Order.ShippingCity" } })
-                    @Html.ValidationMessageFor(model => model.ShippingCity, "", new { @class = "text-danger" })
-                </div>
-
-                <div class="col-xs-6 form-group">
-                    @Html.LabelFor(model => model.ShippingState, "State", htmlAttributes: new { @class = "control-label" })
-                    @Html.EditorFor(model => model.ShippingState, new { htmlAttributes = new { @class = "form-control", ng_model = "Order.ShippingState" } })
-                    @Html.ValidationMessageFor(model => model.ShippingState, "", new { @class = "text-danger" })
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-6 form-group">
-                    @Html.LabelFor(model => model.ShippingZip, "Zip", htmlAttributes: new { @class = "control-label" })
-                    @Html.EditorFor(model => model.ShippingZip, new { htmlAttributes = new { @class = "form-control", ng_model = "Order.ShippingZip" } })
-                    @Html.ValidationMessageFor(model => model.ShippingZip, "", new { @class = "text-danger" })
-                </div>
-            </div>
-
-            
-            
-            <div class="row" style="margin-top:25px;margin-bottom:10px">
-                <div class="col-xs-12">
-                    <span style="color:blue;font-weight:bold;">FINANCIAL DEPARTMENT</span>
-                </div>
-            </div>
-
-            <div class="row" style="margin-top:15px;margin-bottom:15px">
-                <div class="col-xs-12">                    
-                    <input type="checkbox" ng-change="copyFromTeacher()" ng-model="ind_FD" /> Copy from teacher info
-                </div>
-            </div>
-
-            <div class="row">
-
-                <div class="col-xs-6 form-group">
-                    @Html.LabelFor(model => model.FD_FirstName, "First Name", htmlAttributes: new { @class = "control-label" })
-                    @Html.EditorFor(model => model.FD_FirstName, new { htmlAttributes = new { @class = "form-control", ng_model = "Order.FD_FirstName" } })
-                    @Html.ValidationMessageFor(model => model.FD_FirstName, "", new { @class = "text-danger" })
-                </div>
-
-                <div class="col-xs-6 form-group">
-                    @Html.LabelFor(model => model.FD_LastName, "Last Name", htmlAttributes: new { @class = "control-label" })
-                    @Html.EditorFor(model => model.FD_LastName, new { htmlAttributes = new { @class = "form-control", ng_model = "Order.FD_LastName" } })
-                    @Html.ValidationMessageFor(model => model.FD_LastName, "", new { @class = "text-danger" })
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-6 form-group">
-                    @Html.LabelFor(model => model.FD_Email, "Email", htmlAttributes: new { @class = "control-label" })
-                    @Html.EditorFor(model => model.FD_Email, new { htmlAttributes = new { @class = "form-control", ng_model = "Order.FD_Email" } })
-                    @Html.ValidationMessageFor(model => model.FD_Email, "", new { @class = "text-danger" })
-                </div>
-
-                <div class="col-xs-6 form-group">
-                    @Html.LabelFor(model => model.FD_Phone, "Phone", htmlAttributes: new { @class = "control-label" })
-                    @Html.EditorFor(model => model.FD_Phone, new { htmlAttributes = new { @class = "form-control", ng_model = "Order.FD_Phone" } })
-                    @Html.ValidationMessageFor(model => model.FD_Phone, "", new { @class = "text-danger" })
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-6 form-group">
-                    @Html.LabelFor(model => model.FD_Mobile, "Mobile", htmlAttributes: new { @class = "control-label" })
-                    @Html.EditorFor(model => model.FD_Mobile, new { htmlAttributes = new { @class = "form-control", ng_model = "Order.FD_Mobile" } })
-                    @Html.ValidationMessageFor(model => model.FD_Mobile, "", new { @class = "text-danger" })
-                </div>
-
-            </div>
-
-            <div class="row" style="margin-top:25px;margin-bottom:10px">
-                <div class="col-xs-12">
-                    <span style="color:blue;font-weight:bold;">SHIPPING ADDRESS</span>
-                </div>
-            </div>
-
-            <div class="row">
-
-                <div class="col-xs-6 form-group">
-                    @Html.LabelFor(model => model.FD_ShippingAddress, "Address", htmlAttributes: new { @class = "control-label" })
-                    @Html.EditorFor(model => model.FD_ShippingAddress, new { htmlAttributes = new { @class = "form-control", ng_model = "Order.FD_ShippingAddress" } })
-                    @Html.ValidationMessageFor(model => model.FD_ShippingAddress, "", new { @class = "text-danger" })
-                </div>
-
-                <div class="col-xs-6 form-group">
-                    @Html.LabelFor(model => model.FD_ShippingCountry, "Country", htmlAttributes: new { @class = "control-label" })
-                    @Html.EditorFor(model => model.FD_ShippingCountry, new { htmlAttributes = new { @class = "form-control", ng_model = "Order.FD_ShippingCountry" } })
-                    @Html.ValidationMessageFor(model => model.FD_ShippingCountry, "", new { @class = "text-danger" })
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-6 form-group">
-                    @Html.LabelFor(model => model.FD_ShippingCity, "City", htmlAttributes: new { @class = "control-label" })
-                    @Html.EditorFor(model => model.FD_ShippingCity, new { htmlAttributes = new { @class = "form-control", ng_model = "Order.FD_ShippingCity" } })
-                    @Html.ValidationMessageFor(model => model.FD_ShippingCity, "", new { @class = "text-danger" })
-                </div>
-
-                <div class="col-xs-6 form-group">
-                    @Html.LabelFor(model => model.FD_ShippingState, "State", htmlAttributes: new { @class = "control-label" })
-                    @Html.EditorFor(model => model.FD_ShippingState, new { htmlAttributes = new { @class = "form-control", ng_model = "Order.FD_ShippingState" } })
-                    @Html.ValidationMessageFor(model => model.FD_ShippingState, "", new { @class = "text-danger" })
-                </div>
-
-                <div class="col-xs-6 form-group">
-                    @Html.LabelFor(model => model.FD_ShippingZip, "Zip", htmlAttributes: new { @class = "control-label" })
-                    @Html.EditorFor(model => model.FD_ShippingZip, new { htmlAttributes = new { @class = "form-control", ng_model = "Order.FD_ShippingZip" } })
-                    @Html.ValidationMessageFor(model => model.FD_ShippingZip, "", new { @class = "text-danger" })
-                </div>
-            </div>
-
-    <div class="row" style="margin-top:25px;margin-bottom:10px">
-        <div class="col-xs-12">
-            <span style="color:blue;font-weight:bold;">PRODUCT DETAILS</span>
         </div>
-    </div>
 
-    <div class="row">
-        <div class="col-xs-12">
-            <table class="table table-condensed table-bordered">
-                <thead>
-                <th style="width:40%">Description</th>
-                <th style="width:20%">Quantity</th>
-                <th style="width:20%">Unit Price</th>
-                <th style="width:20%">Total</th>
-                </thead>
-                <tbody>
-                    <tr ng-repeat="detail in Order.OrderDetails">
-                        <td>
-                            {{ detail.Description }}
-                            @Html.HiddenFor(model => model.OrderDetails.ToList()[0].ZohoIdProduct, new { ng_model = "detail.ZohoIdProduct", @Name = "OrderDetails[0].ZohoIdProduct" })
-                            @Html.HiddenFor(model => model.OrderDetails.ToList()[0].Item, new { ng_model = "detail.Item", @Name = "OrderDetails[0].Item" })
-                            @Html.HiddenFor(model => model.OrderDetails.ToList()[0].Description, new { ng_model = "detail.Description", @Name = "OrderDetails[0].Description" })
-                        </td>
-                        <td>
-                            @Html.EditorFor(model => model.OrderDetails.ToList()[0].Qty, new { htmlAttributes = new { @class = "form-control", ng_change = "calcLine(detail)", ng_model = "detail.Qty", @Name = "OrderDetails[0].Qty" } })
-                            @Html.ValidationMessageFor(model => model.OrderDetails.ToList()[0].Qty, "", new { @class = "text-danger" })
-                        </td>
-                        <td class="text-right">
-                            {{ detail.Price | currency: "$ " : 2 }}
-                            @Html.HiddenFor(model => model.OrderDetails.ToList()[0].Price, new { ng_model = "detail.Price", @Name = "OrderDetails[0].Price" })
-                        </td>
-                        <td class="text-right">
-                            {{ detail.Total | currency: "$ " : 2 }}
-                        </td>
+        <div class="row">
+            <div class="col-xs-4 form-group">
+                @Html.LabelFor(model => model.FirstName, "First Name", htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger", @style = "display:block;" })
+            </div>
+            <div class="col-xs-4 form-group">
+                @Html.LabelFor(model => model.LastName, "Last Name", htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-xs-4 form-group">
+                @Html.LabelFor(model => model.OccupationTitle, "Occupation Title", htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.OccupationTitle, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.OccupationTitle, "", new { @class = "text-danger" })
+            </div>
+        </div>
 
-                    </tr>
+        <div class="row">
+            <div class="col-xs-4 form-group">
+                @Html.LabelFor(model => model.Email, "Email", htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-xs-4 form-group">
+                @Html.LabelFor(model => model.Phone, "Phone", htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-xs-4 form-group">
+                @Html.LabelFor(model => model.Extension, "Extension", htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.Extension, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Extension, "", new { @class = "text-danger" })
+            </div>
+        </div>
 
-                </tbody>
-            </table>
+        <div class="row">
+            <div class="col-xs-4 form-group">
+                @Html.LabelFor(model => model.OrganizationType, "Organization Type", htmlAttributes: new { @class = "control-label" })
+                @Html.DropDownListFor(model => model.OrganizationType, (SelectList)ViewBag.OrganizationTypeDDDW, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.OrganizationType, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-xs-4 form-group">
+                @Html.LabelFor(model => model.SchoolState, "School State", htmlAttributes: new { @class = "control-label" })
+                @Html.DropDownListFor(model => model.SchoolState, (SelectList)ViewBag.StateDDDW, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.SchoolState, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-xs-4 form-group">
+                @Html.LabelFor(model => model.SchoolCity, "School City", htmlAttributes: new { @class = "control-label" })
+                @Html.DropDownListFor(model => model.SchoolCity, (SelectList)ViewBag.CityDDDW, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.SchoolCity, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 form-group">
+                <div id="SchoolNameDDDW" style="display:none">
+                    @Html.LabelFor(model => model.SchoolID, "Organization Name", htmlAttributes: new { @class = "control-label" })
+                    @Html.DropDownListFor(model => model.SchoolID, (SelectList)ViewBag.OrganizationNameDDDW, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.SchoolID, "", new { @class = "text-danger", @style = "display:none" })
+                </div>
+                <div id="SchoolNameText">
+                    @Html.LabelFor(model => model.SchoolName, "Organization Name", htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(model => model.SchoolName, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.SchoolName, "", new { @class = "text-danger", @style = "display:none" })
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-6 form-group">
+                @Html.LabelFor(model => model.ShippingAddress, "Address", htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.ShippingAddress, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ShippingAddress, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-xs-6 form-group">
+                @Html.LabelFor(model => model.OfficeClassRoomLocation, "Office or Classroom Location", htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.OfficeClassRoomLocation, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.OfficeClassRoomLocation, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4 form-group">
+                @Html.LabelFor(model => model.ShippingCity, "City", htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.ShippingCity, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ShippingCity, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-xs-4 form-group">
+                @Html.LabelFor(model => model.ShippingState, "State", htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.ShippingState, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ShippingState, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-xs-4 form-group">
+                @Html.LabelFor(model => model.ShippingZip, "Zip", htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.ShippingZip, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ShippingZip, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="row" style="margin-top:25px;margin-bottom:10px">
+            <div class="col-xs-12">
+                <span style="color:blue;font-weight:bold;">FINANCIAL DEPARTMENT</span>
+            </div>
+        </div>
+
+        <div class="row" style="margin-top:15px;margin-bottom:15px">
+            <div class="col-xs-12">
+                <input id="ind_FD" name="ind_FD" type="checkbox" /> Copy from teacher info
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-xs-4 form-group">
+                @Html.LabelFor(model => model.FD_FirstName, "First Name", htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.FD_FirstName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FD_FirstName, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="col-xs-4 form-group">
+                @Html.LabelFor(model => model.FD_LastName, "Last Name", htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.FD_LastName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FD_LastName, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-xs-4 form-group">
+                @Html.LabelFor(model => model.FD_OccupationTitle, "Occupation Title", htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.FD_OccupationTitle, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FD_OccupationTitle, "", new { @class = "text-danger" })
+            </div>
 
         </div>
-    </div>
+        <div class="row">
+            <div class="col-xs-4 form-group">
+                @Html.LabelFor(model => model.FD_Email, "Email", htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.FD_Email, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FD_Email, "", new { @class = "text-danger" })
+            </div>
 
-    <div class="row">
-        <div class="col-xs-12">
-            <table style="width:100%">
-                <tbody>
-                    <tr>
-                        <td style="width:80%;" class="text-right">SubTotal $&nbsp;</td>
-                        <td style="width:20%;" class="text-right">
-                            @Html.EditorFor(model => model.SubTotal, new { htmlAttributes = new { @class = "form-control text-right", ng_model = "Order.SubTotal", @readonly = "readonly" } })
-                            @Html.ValidationMessageFor(model => model.SubTotal, "", new { @class = "text-danger" })
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-right">Shipping Charges $&nbsp;</td>
-                        <td class="text-right">                                              
-                            @Html.EditorFor(model => model.ShippingCharges, new { htmlAttributes = new { @class = "form-control text-right", ng_model = "Order.ShippingCharges", ng_change = "calcTotals()", onchange = "TwoDec(this)" } })
-                            @Html.ValidationMessageFor(model => model.ShippingCharges, "", new { @class = "text-danger" })
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-right">Tax $&nbsp;</td>
-                        <td class="text-right">
-                            @Html.EditorFor(model => model.Tax, new { htmlAttributes = new { @class = "form-control text-right", ng_model = "Order.Tax", ng_change = "calcTotals()", onchange = "TwoDec(this)" } })
-                            @Html.ValidationMessageFor(model => model.Tax, "", new { @class = "text-danger" })                            
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-right">Total $&nbsp;</td>
-                        <td class="text-right">
-                            @Html.EditorFor(model => model.Total, new { htmlAttributes = new { @class = "form-control text-right", ng_model = "Order.Total", @readonly = "readonly"  } })
-                            @Html.ValidationMessageFor(model => model.Total, "", new { @class = "text-danger" })
+            <div class="col-xs-4 form-group">
+                @Html.LabelFor(model => model.FD_Phone, "Phone", htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.FD_Phone, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FD_Phone, "", new { @class = "text-danger" })
+            </div>
 
-                        </td>
-                    </tr>
+            <div class="col-xs-4 form-group">
+                @Html.LabelFor(model => model.FD_Extension, "Extension", htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.FD_Extension, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FD_Extension, "", new { @class = "text-danger" })
+            </div>
 
-                </tbody>
-            </table>
-
+        </div>
+        <div class="row">
+            <div class="col-xs-6 form-group">
+                @Html.LabelFor(model => model.FD_ShippingAddress, "Address", htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.FD_ShippingAddress, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FD_ShippingAddress, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-xs-6 form-group">
+                @Html.LabelFor(model => model.FD_OfficeLocation, "Office Location", htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.FD_OfficeLocation, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FD_OfficeLocation, "", new { @class = "text-danger" })
+            </div>
 
         </div>
 
-    </div>
+        <div class="row">
+            <div class="col-xs-4 form-group">
+                @Html.LabelFor(model => model.FD_ShippingCity, "City", htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.FD_ShippingCity, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FD_ShippingCity, "", new { @class = "text-danger" })
+            </div>
 
+            <div class="col-xs-4 form-group">
+                @Html.LabelFor(model => model.FD_ShippingState, "State", htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.FD_ShippingState, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FD_ShippingState, "", new { @class = "text-danger" })
+            </div>
 
-    <div class="row">
-        <div class="col-xs-6 form-group">
-            @Html.CheckBoxFor(model => model.AcceptTC, new { htmlAttributes = new { @class = "form-control" } })<span>&nbsp;&nbsp;Accept the <a href="#">Terms and Conditions</a></span><br />
-            @Html.ValidationMessageFor(model => model.AcceptTC, "", new { @class = "text-danger" })
+            <div class="col-xs-4 form-group">
+                @Html.LabelFor(model => model.FD_ShippingZip, "Zip", htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.FD_ShippingZip, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FD_ShippingZip, "", new { @class = "text-danger" })
+            </div>
         </div>
-    </div>
 
-    <div class="row">
-        <div class="col-xs-12">
-            <br>
-            <input type="submit" value="Create" class="btn btn-primary " />
+        <div class="row" style="margin-top:25px;margin-bottom:10px">
+            <div class="col-xs-12">
+                <span style="color:blue;font-weight:bold;">PRODUCT DETAILS</span>
+            </div>
         </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <table id="ProductDetails" class="table table-condensed table-bordered">
+                    <thead>
+                    <th style="width:40%">Description</th>
+                    <th style="width:20%">Quantity</th>
+                    <th style="width:20%">Unit Price</th>
+                    <th style="width:20%">Total</th>
+                    </thead>
+                    <tbody>
+                        @for (var i = 0; i < Model.OrderDetails.Count(); i++)
+                        {
+                            <tr id="rr">
+                                <td>
+                                    @Html.HiddenFor(model => model.OrderDetails.ToList()[i].ZohoIdProduct, new { @Name = String.Format("OrderDetails[{0}].ZohoIdProduct", i) })
+                                    @Html.HiddenFor(model => model.OrderDetails.ToList()[i].Item, new { @Name = String.Format("OrderDetails[{0}].Item", i) })
+                                    @Html.EditorFor(model => model.OrderDetails.ToList()[i].Name, new { htmlAttributes = new { @style = "border:0;background-color:white", @readonly = "readonly", @class = "form-control text-left", @Name = String.Format("OrderDetails[{0}].Name", i) } })
+                                </td>
+                                <td>
+                                    @Html.EditorFor(model => model.OrderDetails.ToList()[i].Qty, new { htmlAttributes = new { @class = "form-control", @Name = String.Format("OrderDetails[{0}].Qty", i) } })
+                                    @Html.ValidationMessageFor(model => model.OrderDetails.ToList()[i].Qty, "", new { @class = "text-danger", data_valmsg_for = String.Format("OrderDetails[{0}].Qty", i) })
+                                </td>
+                                <td class="text-right">
+                                    @Html.EditorFor(model => model.OrderDetails.ToList()[i].Price, new { htmlAttributes = new { @style = "border:0;background-color:white", @readonly = "readonly", @class = "form-control text-right", @Name = String.Format("OrderDetails[{0}].Price", i) } })
+                                </td>
+                                <td class="text-right">
+                                    @Html.EditorFor(model => model.OrderDetails.ToList()[i].Total, new { htmlAttributes = new { @style = "border:0;background-color:white", @readonly = "readonly", @class = "form-control text-right", @Name = String.Format("OrderDetails[{0}].Total", i) } })
+                                </td>
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <table style="width:100%">
+                    <tbody>
+                        <tr>
+                            <td style="width:80%;" class="text-right">SubTotal $&nbsp;</td>
+                            <td style="width:20%;" class="text-right">
+                                @Html.EditorFor(model => model.SubTotal, new { htmlAttributes = new { @class = "form-control text-right", @readonly = "readonly" } })
+                                @Html.ValidationMessageFor(model => model.SubTotal, "", new { @class = "text-danger" })
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-right">Shipping Charges $&nbsp;</td>
+                            <td class="text-right">
+                                @Html.EditorFor(model => model.ShippingCharges, new { htmlAttributes = new { @class = "form-control text-right", @readonly = "readonly" } })
+                                @Html.ValidationMessageFor(model => model.ShippingCharges, "", new { @class = "text-danger" })
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-right"><span id="TaxPercent" style="color:blue;">&nbsp;</span>Tax $&nbsp;</td>
+                            <td class="text-right">
+                                @Html.HiddenFor(model => model.TaxPercentage)
+                                @Html.EditorFor(model => model.Tax, new { htmlAttributes = new { @class = "form-control text-right", @readonly = "readonly" } })
+                                @Html.ValidationMessageFor(model => model.Tax, "", new { @class = "text-danger" })
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-right">Total $&nbsp;</td>
+                            <td class="text-right">
+                                @Html.EditorFor(model => model.Total, new { htmlAttributes = new { @class = "form-control text-right", @readonly = "readonly" } })
+                                @Html.ValidationMessageFor(model => model.Total, "", new { @class = "text-danger" })
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 form-group">
+                @Html.LabelFor(model => model.PaymentMethod, "Payment Method", htmlAttributes: new { @class = "contro-label" }) <br />
+                @Html.RadioButtonFor(model => model.PaymentMethod, "P", new { htmlAttributes = new { @class = "form-control" } }) Will send Purchase Order<br />
+                @Html.RadioButtonFor(model => model.PaymentMethod, "C", new { htmlAttributes = new { @class = "form-control" } }) Purchase with credit card Today
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-xs-12 form-group">
+                @Html.CheckBoxFor(model => model.AcceptTC, new { htmlAttributes = new { @class = "form-control" } })<span>&nbsp;&nbsp;Accept the <a href="http://www.roboterra.com/terms/" target="_blank">Terms and Conditions</a></span><br />
+                @Html.ValidationMessageFor(model => model.AcceptTC, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-xs-12">
+                <br>
+                <input type="submit" value="Create" class="btn btn-primary " />
+            </div>
+        </div>
+
+
+
     </div>
-
-
-
-</div>
 
 }
 
-@section scripts {
-<script>
-    function TwoDec(el) {
-        el.value = parseFloat(el.value).toFixed(2);        
-        //$("#" + name).val(el.value); $("#" + name).trigger('input');  // To trigger the ng_change
-    }
-</script>
+            @section scripts {
+                <script>
 
-}
+                    $(document).on('submit', 'form', function () {
+                        //alert("submitted");
+                        $("#fakeLoader").fakeLoader({
+                            timeToHide: 90000, //Time in milliseconds for fakeLoader disappear
+                            spinner: "spinner6",//Options: 'spinner1', 'spinner2', 'spinner3', 'spinner4', 'spinner5', 'spinner6', 'spinner7' 
+                        });
+                        return true;
+                    });
+
+
+                    function TwoDec(el) {
+                        el.value = parseFloat(el.value).toFixed(2);
+                    }
+
+                    $(document).ready(function () {
+
+                        /*
+                        $("#fakeLoader").fakeLoader({
+                            timeToHide: 190000, //Time in milliseconds for fakeLoader disappear
+                            spinner: "spinner6",//Options: 'spinner1', 'spinner2', 'spinner3', 'spinner4', 'spinner5', 'spinner6', 'spinner7' 
+                        });
+                        */
+
+                        $("#OrganizationType").change(function () {
+                            otype = $(this).val();
+
+                            if ($(this).val() == "Other") {
+                                $("div[id='SchoolNameText']").css("display", "");
+                                $("div[id='SchoolNameDDDW']").css("display", "none");
+                            }
+                            else {
+                                $("div[id='SchoolNameText']").css("display", "none");
+                                $("div[id='SchoolNameDDDW']").css("display", "");
+                            }
+
+                            param = { type: otype };
+                            $.ajax({
+                                url: "@Url.Action("_GetStates", "Order")", data: param, cache: false, async: false,
+                                success: function (data) {
+                                    $("#SchoolState").html(data);
+                                    $("#SchoolState").trigger('change');
+                                    $("#SchoolCity").trigger('change');
+                                },
+                                error: function (obj, textStatus, errorThrown) { alert("Error getting list of States: " + errorThrown); }
+                            });
+
+                        });
+
+                        $("#SchoolState").change(function () {
+                            otype = $("#OrganizationType").val();
+                            ostate = $("#SchoolState").val();
+                            ocity = $("#SchoolCity").val();
+
+                            if (otype == null || otype == "") { return };
+                            if (ostate == null || ostate == "") { return };
+                            if (ocity == null || ocity == "") { return };
+
+                            param = { type: otype, state: ostate };
+                            $.ajax({
+                                url: "@Url.Action("_GetCities", "Order")", data: param, cache: false, async: false,
+                                success: function (data) {
+                                    $("#SchoolCity").html(data);
+                                    $("#SchoolCity").trigger('change');
+                                },
+                                error: function (obj, textStatus, errorThrown) { alert("Error getting list of cities: " + errorThrown); }
+                            });
+
+                            // For recalculating the Tax
+                            Totales()
+                        });
+
+                        $("#SchoolCity").change(function () {
+                            otype = $("#OrganizationType").val();
+                            ostate = $("#SchoolState").val();
+                            ocity = $("#SchoolCity").val();
+
+                            if (otype == null || otype == "") { return };
+                            if (ostate == null || ostate == "") { return };
+                            if (ocity == null || ocity == "") { return };
+
+                            param = { type: otype, state: ostate, city: ocity };
+                            $.ajax({
+                                url: "@Url.Action("_GetSchools", "Order")", data: param, cache: false, async: false,
+                                success: function (data) {
+                                    $("select[name='SchoolID']").html(data);
+                                },
+                                error: function (obj, textStatus, errorThrown) { alert("Error getting list of Schools: " + errorThrown); }
+                            });
+
+                        });
+
+                        $("#SchoolID").change(function () {
+                            oID = $(this).val();
+                            param = { ID: oID };
+                            $.ajax({
+                                url: "@Url.Action("_GetSchoolInfo", "Order")", data: param, cache: false, async: false,
+                                success: function (data) {
+
+                                    $("#ShippingAddress").val(data.LocationAddress);
+                                    $("#ShippingCity").val(data.LocationCity);
+                                    $("#ShippingState").val(data.LocationState);
+                                    $("#ShippingZip").val(data.LocationZip);
+
+                                    $("#SchoolName").val(data.SchooName);
+                                },
+                                error: function (obj, textStatus, errorThrown) { alert("Error getting School information: " + errorThrown); }
+                            });
+
+                        });
+
+                        $('#ind_FD').change(function () {
+                            if ($(this).is(":checked")) {
+                                $("#FD_FirstName").val($("#FirstName").val());
+                                $("#FD_LastName").val($("#LastName").val());
+                                $("#FD_Email").val($("#Email").val());
+                                $("#FD_Phone").val($("#Phone").val());
+                                $("#FD_Mobile").val($("#Mobile").val());
+                                $("#FD_ShippingAddress").val($("#ShippingAddress").val());
+                                $("#FD_ShippingCountry").val($("#ShippingCountry").val());
+                                $("#FD_ShippingCity").val($("#ShippingCity").val());
+                                $("#FD_ShippingState").val($("#ShippingState").val());
+                                $("#FD_ShippingZip").val($("#ShippingZip").val());
+                            }
+                        });
+
+                        $("input[name$='ShippingCharges']").on('input', function (e) {
+                            Totales();
+                        });
+
+                        $("input[name$='Tax']").on('input', function (e) {
+                            Totales();
+                        });
+
+
+                        $("input[name$='Qty']").on('input', function (e) {
+
+                            trObject = $(e.target).closest("tr");
+                            priceObject = trObject.find("input[name$='Price']");
+                            totalObject = trObject.find("input[name$='Total']");
+
+                            qty = e.target.value;
+                            if (!(qty >= 0)) {
+                                qty = 0;
+                            }
+
+                            total = ($(priceObject).val() * qty).toFixed(2);
+                            $(totalObject).val(total);
+                            Totales();
+                        });
+
+
+                        function Totales() {
+
+                            var subtotal = 0;
+                            var shipping = 0;
+                            var taxPercent = 0;
+                            var tax = 0;
+                            var total = 0;
+                            var totalqty = 0;
+                            var state = $("#SchoolState").val();
+
+                            $('#ProductDetails > tbody  > tr').each(function () {
+                                totalObject = $(this).find("input[name$='Total']");
+                                qtyObject = $(this).find("input[name$='Qty']");
+                                total = $(totalObject).val();
+                                qty = $(qtyObject).val();
+                                if (!($.isNumeric(qty))) { qty = 0; }
+                                totalqty = parseInt(totalqty) + parseInt(qty);
+                                subtotal = parseFloat(subtotal) + parseFloat(total);
+                            });
+
+                            subtotal = (subtotal + 0.00).toFixed(2);
+
+                            $.ajax({
+                                url: "@Url.Action("_GetShippingRate", "Order")", data: { quantity: totalqty }, cache: false, async: false,
+                                success: function (data) {
+                                    shipping = parseFloat(data).toFixed(2);
+                                },
+                                error: function (obj, textStatus, errorThrown) { alert("Error getting Shipping Rate: " + errorThrown); }
+                            });
+
+                            subtotalshipping = parseFloat(subtotal) + parseFloat(shipping);
+
+                            $.ajax({
+                                url: "@Url.Action("_GetTax", "Order")", data: { state: state, amount: subtotalshipping }, cache: false, async: false,
+                                success: function (data) {
+                                    taxPercent = parseFloat(data.taxPercent).toFixed(3);
+                                    tax = parseFloat(data.tax).toFixed(2);
+                                    //alert(taxPercent);
+                                },
+                                error: function (obj, textStatus, errorThrown) { alert("Error getting Tax: " + errorThrown); }
+                            });
+
+                            total = (parseFloat(subtotal) + parseFloat(shipping) + parseFloat(tax)).toFixed(2);
+
+                            $("#SubTotal").val(subtotal);
+                            $("#ShippingCharges").val(shipping);
+                            if (taxPercent > 0) {
+                                $("#TaxPercent").html("(" + taxPercent.toString() + "%)&nbsp;");
+                            }
+                            else {
+                                $("#TaxPercent").html("");
+                            }
+                            $("#TaxPercentage").val(taxPercent);
+                            $("#Tax").val(tax);
+                            $("#Total").val(total);
+                        }
+
+
+                    });
+
+
+                </script>
+            }
 
 

@@ -1,0 +1,6 @@
+﻿@model List<SelectListItem>
+
+@foreach (var x in Model)
+{
+    <option value="@x.Value" selected="@x.Selected">@x.Text</option>
+}

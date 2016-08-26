@@ -10,6 +10,7 @@ namespace Invoicing.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
+            this.CommandTimeout = 60 * 5; 
         }
 
         protected override void Seed(Invoicing.Models.MyDbContext context)

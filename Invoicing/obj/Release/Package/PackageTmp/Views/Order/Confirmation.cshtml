@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<center>
+    <h2>Thank you!</h2>
+    <h4>The invoice <span style="color:red">@(ViewBag.InvoiceNumber)</span> has been generated successfully and will be e-mailed to you soon</h4>
+    <br />
+
+    @Html.ActionLink("Create a New Invoice", "Create", "Order")
+</center>
+<br />
+

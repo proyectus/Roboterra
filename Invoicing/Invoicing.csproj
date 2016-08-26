@@ -267,6 +267,90 @@
     <Compile Include="Migrations\201608121638500_128.Designer.cs">
       <DependentUpon>201608121638500_128.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201608170254414_129.cs" />
+    <Compile Include="Migrations\201608170254414_129.Designer.cs">
+      <DependentUpon>201608170254414_129.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608180004214_130.cs" />
+    <Compile Include="Migrations\201608180004214_130.Designer.cs">
+      <DependentUpon>201608180004214_130.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608180050300_131.cs" />
+    <Compile Include="Migrations\201608180050300_131.Designer.cs">
+      <DependentUpon>201608180050300_131.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608180051452_132.cs" />
+    <Compile Include="Migrations\201608180051452_132.Designer.cs">
+      <DependentUpon>201608180051452_132.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608180508280_133.cs" />
+    <Compile Include="Migrations\201608180508280_133.Designer.cs">
+      <DependentUpon>201608180508280_133.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608180654575_134.cs" />
+    <Compile Include="Migrations\201608180654575_134.Designer.cs">
+      <DependentUpon>201608180654575_134.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608180946380_135.cs" />
+    <Compile Include="Migrations\201608180946380_135.Designer.cs">
+      <DependentUpon>201608180946380_135.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608180952270_136.cs" />
+    <Compile Include="Migrations\201608180952270_136.Designer.cs">
+      <DependentUpon>201608180952270_136.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608180954059_137.cs" />
+    <Compile Include="Migrations\201608180954059_137.Designer.cs">
+      <DependentUpon>201608180954059_137.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608181514311_138.cs" />
+    <Compile Include="Migrations\201608181514311_138.Designer.cs">
+      <DependentUpon>201608181514311_138.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608190757141_139.cs" />
+    <Compile Include="Migrations\201608190757141_139.Designer.cs">
+      <DependentUpon>201608190757141_139.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608190813450_140.cs" />
+    <Compile Include="Migrations\201608190813450_140.Designer.cs">
+      <DependentUpon>201608190813450_140.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608191852024_141.cs" />
+    <Compile Include="Migrations\201608191852024_141.Designer.cs">
+      <DependentUpon>201608191852024_141.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608200224205_142.cs" />
+    <Compile Include="Migrations\201608200224205_142.Designer.cs">
+      <DependentUpon>201608200224205_142.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608201942291_143.cs" />
+    <Compile Include="Migrations\201608201942291_143.Designer.cs">
+      <DependentUpon>201608201942291_143.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608202157519_144.cs" />
+    <Compile Include="Migrations\201608202157519_144.Designer.cs">
+      <DependentUpon>201608202157519_144.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608202200223_145.cs" />
+    <Compile Include="Migrations\201608202200223_145.Designer.cs">
+      <DependentUpon>201608202200223_145.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608202201224_146.cs" />
+    <Compile Include="Migrations\201608202201224_146.Designer.cs">
+      <DependentUpon>201608202201224_146.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608241723347_147.cs" />
+    <Compile Include="Migrations\201608241723347_147.Designer.cs">
+      <DependentUpon>201608241723347_147.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608241735435_148.cs" />
+    <Compile Include="Migrations\201608241735435_148.Designer.cs">
+      <DependentUpon>201608241735435_148.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608241759124_149.cs" />
+    <Compile Include="Migrations\201608241759124_149.Designer.cs">
+      <DependentUpon>201608241759124_149.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AllTables.cs" />
@@ -280,19 +364,29 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\fakeLoader.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\roboterra-logo.png" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\angularScript.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Properties\PublishProfiles\roboterra.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\fakeLoader.js" />
+    <Content Include="Scripts\jquery-3.1.0.js" />
+    <Content Include="Scripts\jquery-3.1.0.min.js" />
+    <Content Include="Scripts\jquery-3.1.0.slim.js" />
+    <Content Include="Scripts\jquery-3.1.0.slim.min.js" />
+    <Content Include="Scripts\jquery-3.1.0.slim.min.map" />
+    <Content Include="Scripts\jquery-3.1.0.min.map" />
+    <None Include="Scripts\jquery-3.1.0-vsdoc.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -315,7 +409,6 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\_RemoveAccountPartial.cshtml" />
@@ -346,6 +439,8 @@
     <Content Include="Views\Order\Details.cshtml" />
     <Content Include="Views\Order\Edit.cshtml" />
     <Content Include="Views\Order\Index.cshtml" />
+    <Content Include="Views\Order\_GetSchools.cshtml" />
+    <Content Include="Views\Order\Confirmation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -410,6 +505,69 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201608121638500_128.resx">
       <DependentUpon>201608121638500_128.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608170254414_129.resx">
+      <DependentUpon>201608170254414_129.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608180004214_130.resx">
+      <DependentUpon>201608180004214_130.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608180050300_131.resx">
+      <DependentUpon>201608180050300_131.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608180051452_132.resx">
+      <DependentUpon>201608180051452_132.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608180508280_133.resx">
+      <DependentUpon>201608180508280_133.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608180654575_134.resx">
+      <DependentUpon>201608180654575_134.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608180946380_135.resx">
+      <DependentUpon>201608180946380_135.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608180952270_136.resx">
+      <DependentUpon>201608180952270_136.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608180954059_137.resx">
+      <DependentUpon>201608180954059_137.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608181514311_138.resx">
+      <DependentUpon>201608181514311_138.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608190757141_139.resx">
+      <DependentUpon>201608190757141_139.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608190813450_140.resx">
+      <DependentUpon>201608190813450_140.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608191852024_141.resx">
+      <DependentUpon>201608191852024_141.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608200224205_142.resx">
+      <DependentUpon>201608200224205_142.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608201942291_143.resx">
+      <DependentUpon>201608201942291_143.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608202157519_144.resx">
+      <DependentUpon>201608202157519_144.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608202200223_145.resx">
+      <DependentUpon>201608202200223_145.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608202201224_146.resx">
+      <DependentUpon>201608202201224_146.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608241723347_147.resx">
+      <DependentUpon>201608241723347_147.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608241735435_148.resx">
+      <DependentUpon>201608241735435_148.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608241759124_149.resx">
+      <DependentUpon>201608241759124_149.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

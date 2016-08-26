@@ -110,7 +110,7 @@ namespace Invoicing.Models
         public string description  { get; set; }
         public int item_order { get; set; }
         public decimal rate  { get; set; }
-        public decimal unit { get; set; }
+        public string unit { get; set; }
         public decimal quantity { get; set; }
         public decimal discount { get; set; }
         public string tax_id { get; set; }
@@ -126,13 +126,31 @@ namespace Invoicing.Models
         public string additional_field1 { get; set; }
     }
 
+    public class ZI_InvoiceAddress
+    {
+        public string address { get; set; }
+        public string city { get; set; }
+        public string state { get; set; }
+        public string zip { get; set; }
+        public string country { get; set; }
+        public string fax { get; set; }
+    }
+
     public class ZI_InvoiceEmailInfo
     {
         public List<string> to_mail_ids { get; set; }
         public List<string> cc_mail_ids { get; set; }
-        public string subject { get; set; }
-        public string body { get; set; }
-        public bool send_from_org_email_id { get; set; }
+        //public string subject { get; set; }
+        //public string body { get; set; }
+        //public bool send_from_org_email_id { get; set; }
+    }
+
+    public class ZI_TaxesList
+    {
+        public string tax_id { get; set; }
+        public string tax_name { get; set; }
+        public double tax_percentage { get; set; }
+        public string tax_type { get; set; }
     }
 
 }
